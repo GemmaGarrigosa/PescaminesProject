@@ -38,7 +38,7 @@ function crearTaulell(files, columnes){
     for (let i = 0; i < files; i++){
         taulell += "<tr>";
         for (let j=0; j < columnes; j++){
-            taulell += `<td id='${i}-${j}' data-mina="false" data-num-mines="0" data-mostrada="false" onclick = "obreCasella(${i},${j})" oncontextmenu="posaBandera(${i},${j})">`;
+            taulell += `<td id='${i}-${j}' data-mina="false" data-num-mines="0" data-mostrada="false" onclick = "obreCasella(${i},${j})">`;
             taulell += `<img src="./img/fons20px.jpg">`;
             taulell += "</td>";
         }
@@ -165,14 +165,7 @@ function mostraCaselles(x, y) {
     }
 }
 
-//TODO EXTRA
-function posaBandera(i,j){
-    let casella = document.getElementById(`${i}-${j}`);
 
-    if (!casella.dataset.mostrada){
-        casella.innerHTML=`<img src="./img/bandera20px.jpg">`;
-    }
-}
 
 //Funció que comprova si has guanyat 
 function comprovaGuanyat(files,columnes){
