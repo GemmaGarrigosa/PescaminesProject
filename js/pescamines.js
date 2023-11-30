@@ -5,6 +5,7 @@ let numMines = 0;
 let acabat = false;
 
 function iniciarPartida(){
+    acabat = false;
     files = parseInt(prompt('Introdueix el nombre de files, entre 10 i 30'));
     columnes= parseInt(prompt('Introdueix el nombre de columnes, entre 10 i 30'));
 
